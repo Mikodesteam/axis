@@ -51,9 +51,17 @@ A mobile trading terminal for Hyperliquid perpetual futures with split and quad 
 - **Non-custodial local signing**
 - **WalletConnect sessions**
 
+## How it works
+
+A technical case study of the architecture, one end-to-end flow, the key engineering decisions and how you would build something like this: **[docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md)**.
+
 ## A look at the code
 
-**Phishing URL check**: [`snippets/phishing_detector.dart`](snippets/phishing_detector.dart). Screens every dApp link before it opens: invalid links and known phishing domains are blocked, and look-alike domains and scam keywords raise a warning.
+Real excerpts from the source, shown for illustration:
+
+- **Phishing URL check** ([`snippets/phishing_detector.dart`](snippets/phishing_detector.dart)): Screens every dApp link before it opens: invalid links and known phishing domains are blocked, and look-alike domains and scam keywords raise a warning.
+- **Conservative liquidation estimate** ([`snippets/perps_order_math.dart`](snippets/perps_order_math.dart)): The isolated liquidation price uses the exchange formula with maintenance margin, so it arrives earlier than the naive entry over leverage figure. Unknown inputs give no number instead of a wrong one.
+- **Fail-closed operator fee** ([`snippets/builder_fee_guard.dart`](snippets/builder_fee_guard.dart)): The builder fee is attached to an order only when it is on, the address is well formed and the fee is inside the exchange limit. Otherwise the order goes out with no fee instead of failing.
 
 Not included: Hosting and domain; Third-party API subscriptions; Developer accounts; Blockchain network fees.
 
