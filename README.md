@@ -8,6 +8,8 @@
   <b>Perps terminal: a Flutter app for on-chain futures trading on Hyperliquid.</b>
 </p>
 
+<p align="center"><sub>Hyperliquid trading app source code · perpetual futures terminal · Flutter iOS & Android · white-label</sub></p>
+
 <p align="center">
   <a href="https://axis-demo.mikodes.com/"><b>▶ Live demo</b></a> ·
   <a href="https://axis.mikodes.com/docs/"><b>Docs</b></a> ·
@@ -64,6 +66,20 @@ Real excerpts from the source, shown for illustration:
 - **Fail-closed operator fee** ([`snippets/builder_fee_guard.dart`](snippets/builder_fee_guard.dart)): The builder fee is attached to an order only when it is on, the address is well formed and the fee is inside the exchange limit. Otherwise the order goes out with no fee instead of failing.
 
 Not included: Hosting and domain; Third-party API subscriptions; Developer accounts; Blockchain network fees.
+
+## FAQ
+
+**Is this the full source code?**  
+No. This repository is a showcase with screenshots, a technical case study and real code excerpts. The complete AXIS source code is sold at [store.mikodes.com/p/axis](https://store.mikodes.com/p/axis/).
+
+**What is AXIS built with?**  
+Flutter, Swift.
+
+**Can I try it before buying?**  
+Yes, open the [live demo](https://axis-demo.mikodes.com/).
+
+**Do I get help with the installation?**  
+Free setup help is included with the store purchase; questions go to [mikodes.com/support](https://mikodes.com/support).
 
 ## Get the full source code
 
